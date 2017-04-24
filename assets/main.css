@@ -8,12 +8,179 @@ html, body, .container-fluid, .row {
 	padding: 0px;
 }
 
+/* Sidebar Details */
+.main-details {
+	background-image: url(/images/background.jpg);
+	background-size: cover;
+	background-position: center center;
+	padding: 20px;
+}
+
+.profile-picture {
+	-webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+	border-radius: 50%;
+	/*margin-bottom: 20px;*/
+
+	margin: 0px 0px 20px 0px;
+
+	left: 0px;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	max-width: 200px !important;
+
+	background-size: cover;
+	background-repeat: none;
+	background-position: center center;
+
+	/*-webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 10px;
+    -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+    box-shadow: rgba(0,0,0,0.8) 0 0 10px;*/
+}
+
+.description {
+	margin-top: 10px;
+	text-align: center;
+	color: white;
+}
+
+.description h3 {
+	font-size: 30px;
+	font-weight: medium;
+}
+
+.description li {
+	margin: 15px 1px 15px -40px;
+	list-style: none;
+	padding: 0px;
+	display: block;
+}
+
+.description li a {
+	color: #FFF;
+	border-radius: 10px;
+	border: solid #FFF 1px;
+	/*margin-top: 30px;*/
+	color: #FFF;
+	padding: 5px 10px 5px 10px;
+}
+
+.description p {
+  margin-bottom: 30px;
+}
+
+/* Posts Deatils */
+
+.small-post {
+	font-family: Palatino, Georgia, Serif;
+	border: grey 1px solid;
+	border-left: none;
+	border-top: none;
+	margin-right: 0px;
+	right: 0px;
+	height: 400px;
+}
+
+.small-post h3 {
+	margin: 0px;
+	margin-top: 2px;
+	padding: 0px;
+	margin-bottom: 5px;
+}
+
+.post-image {
+	width: 100%;
+	height: 170px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	clear: both;
+}
+
+.post-info-header {
+	font-size: 12px;
+	margin-top: 10px;
+	margin-bottom: 3px;
+	padding: 0px !important;
+	min-height: 18px !important;
+}
+
+.post-date {
+	padding: 3px 0px;
+	margin-left: 10px;
+	float: left;
+	color: #999;
+}
+
+.pub-title {
+	font-family: Verdana, Sans-serif;
+	background-color: blue;
+	padding: 2px 5px;
+	margin: 0px;
+	left: 0px;
+	color: white;
+	width: auto;
+	float: left;
+}
+
+/* Publication Titles */
+.pub-title.york-vision {
+	background-color: red;
+}
+
+.pub-title.volteface {
+	background-color: #333;
+}
+
+.pub-title.richmond-twickenham {
+	background-color: purple;
+}
+
 /* Custom Breakpoints */
 /* Mobile */
 @media (max-width: 768px) {
 	.small-post {
 		border-right: none !important;
 		border-left: none !important;
+	}
+
+	.post-info-header {
+		font-size: 12px;
+		margin-top: 10px;
+		margin-bottom: 3px;
+		padding: 0px !important;
+		min-height: 24px !important;
+	}
+
+	.description {
+		margin-top: 0px !important;
+		bottom: 0px !important;
+		text-align: center;
+	}
+
+	.description p {
+		margin-bottom: 20px !important;
+	}
+
+	.description li {
+		margin-left: 0px;
+		display: inline-block;
+	}
+}
+
+/* Tablet and Mobile */
+@media (max-width: 992px) {
+	.small-post {
+		height: auto !important;
+	}
+
+	.description a {
+		float: none;
+	}
+
+	.post-image {
+		height: 220px;
 	}
 }
 
@@ -28,6 +195,18 @@ html, body, .container-fluid, .row {
     z-index: 1000;
     display: block;
   }
+
+  .profile-picture {
+  	margin-top: 40px;
+  }
+}
+
+/* Anything above 1 column of posts */
+@media (min-width: 1199px) {
+	.small-post .post-content {
+		max-height: 20px !important;
+		clear: both;
+	}
 }
 
 /* Medium */
@@ -42,58 +221,4 @@ html, body, .container-fluid, .row {
 	.small-post {
 
 	}
-}
-
-/* Sidebar Details */
-.main-details {
-	background-color: #3399CC;
-	padding: 20px;
-}
-
-.profile-picture {
-	border-radius: 50%;
-	margin-bottom: 20px;
-}
-
-/* Posts Deatils */
-
-.small-post {
-	font-family: Palatino, Georgia, Serif;
-	border: grey 1px solid;
-	border-left: none;
-	border-top: none;
-	margin-right: 0px;
-	right: 0px;
-}
-
-.small-post h3 {
-	margin: 0px;
-	margin-top: 2px;
-	padding: 0px;
-}
-
-.post-image {
-	width: 100%;
-	height: 20%;
-}
-
-.post-date {
-
-}
-
-.pub-title {
-	font-family: Verdana, Sans-serif;
-	background-color: blue;
-	color: white;
-	font-size: 10px;
-	padding: 1px 5px 1px 5px;
-	width: auto;
-	float: left;
-	margin-top: 10px;
-	margin-bottom: 0px;
-}
-
-/* Publication Titles */
-.pub-title.york-vision {
-	background-color: red;
 }

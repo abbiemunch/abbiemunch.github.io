@@ -4,13 +4,18 @@ layout: default
   <div class="row no-gutters">
     {% for post in site.posts %}
     <div class="small-post col-lg-4 col-md-6 col-sm-12">
-      <div class="pub-title {{ post.category }}">
-        {{ post.publication }}
+      <div class="post-info-header col-sm-12 no-gutters">
+        <div class="pub-title {{ post.category }}" style="background-color: ">
+          {{ post.publication }}
+        </div>
+        <div class="post-date">
+          {{ post.date | date_to_string }}
+        </div>
       </div>
       <h3 class="col-sm-12">{{ post.title }}</h3>
-      <p><img src="{{ post.article-image }}" class="post-image"></p>
-      <p>This is the content of the post, feat. some great writing from Abbie.</p>
-      <p><a href="{{ post.article-link }}">Read On Site</a></p>
+      <p><div class="post-image" style="background-image:url({{ post.article-image }});"></div></p>
+      <p class="post-content">{{ post.excerpt }}</p>
+      <p><a href="{{ post.article-link }}" target="_">Read On Site</a></p>
     </div>
     {% endfor %}
   </div>
