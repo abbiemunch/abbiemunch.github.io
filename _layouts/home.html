@@ -2,25 +2,24 @@
 layout: default
 ---
 
-<div class="home">
 
-  <h1 class="page-heading">Posts</h1>
-  
-  {{ content }}
-
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-
-        <h2>
-          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
-
-</div>
+  <div class="row no-gutters">
+    <div class="small-post col-lg-4 col-md-6 col-sm-12">
+      <h3>Post Title</h3>
+      <p> -IMG- </p>
+      <p>This is the content of the post, feat. some great writing from Abbie.</p>
+      <p><a href="link">Read On Site</a></p>
+    </div>
+    <div class="small-post col-lg-4 col-md-6 col-sm-12">
+      <h3>Post Title</h3>
+      <p> -IMG- </p>
+      <p>This is the content of the post, feat. some great writing from Abbie.</p>
+      <p><a href="link">Read On Site</a></p>
+    </div>
+    <div class="small-post col-lg-4 col-md-6 col-sm-12">
+      <h3>Post Title</h3>
+      <p> -IMG- </p>
+      <p>This is the content of the post, feat. some great writing from Abbie.</p>
+      <p><a href="link">Read On Site</a></p>
+    </div>
+  </div>

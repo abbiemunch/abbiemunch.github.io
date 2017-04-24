@@ -6,12 +6,9 @@
   <body>
 
     {% include header.html %}
-
-    <main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        {{ content }}
-      </div>
-    </main>
+    <div class="content-wrapper col-lg-9 col-lg-offset-3 col-md-8 col-md-offset-4 col-sm-8 col-sm-offset-4 col-xs-12">
+    {{ content }}
+    </div>
 
     {% include footer.html %}
 

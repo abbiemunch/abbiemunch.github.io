@@ -1,3 +1,40 @@
-body {
-	background-color: red;
+html, body, .container-fluid, .row {
+	height: 100%;
+}
+
+/* Main Layout */
+.content-wrapper {
+	width: 100%;
+	padding: 0px;
+}
+
+/* Sidebar Details */
+.main-details {
+	background-color: #3399CC;
+	padding: 20px;
+}
+
+.profile-picture {
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .main-details {
+    position: fixed !important;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    height: 100%;
+    z-index: 1000;
+    display: block;
+  }
+}
+
+/* Posts Deatils */
+
+.small-post {
+	border: black 1px solid;
+	margin-right: -1px;
+	margin-bottom: -1px;
 }
