@@ -1,25 +1,16 @@
 ---
 layout: default
 ---
-
-
   <div class="row no-gutters">
+    {% for post in site.posts %}
     <div class="small-post col-lg-4 col-md-6 col-sm-12">
-      <h3>Post Title</h3>
-      <p> -IMG- </p>
+      <div class="pub-title {{ post.category }}">
+        {{ post.publication }}
+      </div>
+      <h3 class="col-sm-12">{{ post.title }}</h3>
+      <p><img src="{{ post.article-image }}" class="post-image"></p>
       <p>This is the content of the post, feat. some great writing from Abbie.</p>
-      <p><a href="link">Read On Site</a></p>
+      <p><a href="{{ post.article-link }}">Read On Site</a></p>
     </div>
-    <div class="small-post col-lg-4 col-md-6 col-sm-12">
-      <h3>Post Title</h3>
-      <p> -IMG- </p>
-      <p>This is the content of the post, feat. some great writing from Abbie.</p>
-      <p><a href="link">Read On Site</a></p>
-    </div>
-    <div class="small-post col-lg-4 col-md-6 col-sm-12">
-      <h3>Post Title</h3>
-      <p> -IMG- </p>
-      <p>This is the content of the post, feat. some great writing from Abbie.</p>
-      <p><a href="link">Read On Site</a></p>
-    </div>
+    {% endfor %}
   </div>

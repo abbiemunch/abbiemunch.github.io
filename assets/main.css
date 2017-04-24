@@ -8,17 +8,16 @@ html, body, .container-fluid, .row {
 	padding: 0px;
 }
 
-/* Sidebar Details */
-.main-details {
-	background-color: #3399CC;
-	padding: 20px;
+/* Custom Breakpoints */
+/* Mobile */
+@media (max-width: 768px) {
+	.small-post {
+		border-right: none !important;
+		border-left: none !important;
+	}
 }
 
-.profile-picture {
-	border-radius: 50%;
-	margin-bottom: 20px;
-}
-
+/* Anything above xs */
 @media (min-width: 768px) {
   .main-details {
     position: fixed !important;
@@ -31,10 +30,70 @@ html, body, .container-fluid, .row {
   }
 }
 
+/* Medium */
+@media (min-width: 992px), (max-width: 1199px) {
+	.small-post {
+
+	}
+}
+
+/* Large */
+@media (min-width: 1200px) {
+	.small-post {
+
+	}
+}
+
+/* Sidebar Details */
+.main-details {
+	background-color: #3399CC;
+	padding: 20px;
+}
+
+.profile-picture {
+	border-radius: 50%;
+	margin-bottom: 20px;
+}
+
 /* Posts Deatils */
 
 .small-post {
-	border: black 1px solid;
-	margin-right: -1px;
-	margin-bottom: -1px;
+	font-family: Palatino, Georgia, Serif;
+	border: grey 1px solid;
+	border-left: none;
+	border-top: none;
+	margin-right: 0px;
+	right: 0px;
+}
+
+.small-post h3 {
+	margin: 0px;
+	margin-top: 2px;
+	padding: 0px;
+}
+
+.post-image {
+	width: 100%;
+	height: 20%;
+}
+
+.post-date {
+
+}
+
+.pub-title {
+	font-family: Verdana, Sans-serif;
+	background-color: blue;
+	color: white;
+	font-size: 10px;
+	padding: 1px 5px 1px 5px;
+	width: auto;
+	float: left;
+	margin-top: 10px;
+	margin-bottom: 0px;
+}
+
+/* Publication Titles */
+.pub-title.york-vision {
+	background-color: red;
 }
