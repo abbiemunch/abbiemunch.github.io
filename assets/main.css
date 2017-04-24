@@ -124,6 +124,27 @@ html, body, .container-fluid, .row {
 	float: left;
 }
 
+.post-content-wrapper {
+	height: 320px;
+	overflow: hidden;
+	clear: both;
+	margin-bottom: 5px;
+}
+
+.post-content-cutoff {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	height: 35px;
+	width: 100%;
+	margin-top: -82px;
+	z-index: 100;
+
+	background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+	background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+	background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+
 /* Publication Titles */
 .pub-title.york-vision {
 	background-color: red;
@@ -181,6 +202,14 @@ html, body, .container-fluid, .row {
 
 	.post-image {
 		height: 220px;
+	}
+
+	.post-content-wrapper {
+		height: auto;
+	}
+
+	.post-content-cutoff {
+		display: none;
 	}
 }
 

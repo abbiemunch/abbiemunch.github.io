@@ -12,9 +12,13 @@ layout: default
           {{ post.date | date_to_string }}
         </div>
       </div>
-      <h3 class="col-sm-12">{{ post.title }}</h3>
-      <p><div class="post-image" style="background-image:url({{ post.article-image }});"></div></p>
-      <p class="post-content">{{ post.excerpt }}</p>
+      <div class="post-content-wrapper">
+        <h3 class="col-sm-12">{{ post.title }}</h3>
+        <p><div class="post-image" style="background-image:url({{ post.article-image }});"></div></p>
+        <p class="post-content">{{ post.excerpt }}</p>
+        <div class="post-content-cutoff">
+        </div>
+      </div>
       <p><a href="{{ post.article-link }}" target="_">Read On Site</a></p>
     </div>
     {% endfor %}
